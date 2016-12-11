@@ -90,6 +90,591 @@ class App{
     
 
 
+}
+
+class Component extends App{
+	constructor(){
+
+		super();
+	}
+
+	x(){
+		let html = `
+
+
+
+		<!-- NAV -->
+
+		<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+			<div class="container topnav font">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand topnav" href="#" onclick="component.land()">
+                    <img border="0" src="img/wolf.png" width="100" height="70" style="margin:-26px 0px">
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+
+						<li>
+							<a href="#" onclick="component.land()"><i style="margin-top: -18px" class="medium1 material-icons left">home</i></a>
+						</li>
+                      	<li>
+                      		<a href="#" onclick="component.house()">GREAT HOUSES</a>
+                      	</li>                      
+						<li>
+							<a href="#" onclick="component.clist()">CHARACTERS</a>
+						</li>
+						<li>
+							<a href="#" onclick="component.create()">CREATE</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- NAV -->
+
+
+
+
+
+		<!-- LOGO -->
+
+		<div id="landingpage">
+		<div class="intro-header">
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="intro-image">
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- LOGO -->
+
+
+
+
+
+
+		<!-- DESCRIPTION -->
+
+		<section id="services">
+			<div class="container">
+				<div class="row text-center">
+						<h2 class="service-heading">GAME OF THRONES</h2>
+						<p class="text-muted">Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. 
+            			It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones. 
+            			It is filmed at Titanic Studios in Belfast, on location in the United Kingdom, and in Croatia, Iceland, Malta, Morocco, Spain, and the United 
+            			States. The series premiered on HBO in the United States on April 17, 2011, and its sixth season ended on June 26, 2016. The series was renewed
+             			for a seventh season, scheduled to premiere in mid-2017, with a total of seven episodes and will conclude with its eighth season in 2018.</p>
+					</div>
+				</div
+			</div>
+		</section>
+
+		<!--  DESCRIPTION -->
+
+
+
+
+
+
+		<!-- GREATHOUSES BANNER-->
+
+		<aside class="cc">
+			<div class="text-vertical-center">
+			    <a href="#"  style="text-decoration: none" onclick="component.house()">                       
+				<h1 id="foont">GREAT HOUSES</h1>
+				</a>
+			</div>
+		</aside>
+
+		<!-- GREATHOUSES BANNER-->
+
+
+
+		<!-- DESCRIPTION -->
+
+		<section id="services">
+			<div class="container">
+				<div class="row text-center">
+						<h2 class="service-heading">ABOUT US</h2>
+						<p class="text-muted">A site for speculation, and discussion for HBO’s Game of Thrones, 
+          				the television adaptation of George R. R. Martin’s A Song of Ice and Fire series. 
+          				and has been following the production closely ever since. Student of AMA Davao Computer College.</p>
+          				<a href="https://www.facebook.com/elvin.francisco.545"><i class="fa fa-facebook fa-4x"></i></a>&nbsp
+						<a href="http://steamcommunity.com/id/POPcola/"><i class="fa fa-steam fa-4x"></i></a> &nbsp
+					 	<a href="https://github.com/Ejaaayy"><i class="fa fa-github fa-4x"></i></a>
+					</div>
+				</div
+			</div>
+		</section>
+
+		<!--  DESCRIPTION -->
+
+
+
+
+
+
+		<!-- CHARACTERS BANNER-->
+
+		<aside class="c">
+			<div class="text-vertical-center">
+			    <a href="#"  style="text-decoration: none" onclick="component.clist()">                       
+				<h1 id="foont">CHARACTERS</h1>
+				</a>
+			</div>
+		</aside>
+
+		<!-- CHARACTERS BANNER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- START CHARACTER -->
+
+
+		`;
+        
+		for(let index=0;index<0;index++){
+		    html+=`
+		      <div class="col-xs-12 col-md-4"> 
+		        <div class="thumbnail"> 
+		          <img src="${this.lists[index].image}"> 
+		          <div class="caption">
+		            <h3>${this.lists[index].name}</h3>
+		            <a class="btn1 btn-lg btn-primary" 
+		            href="#" style="text-decoration: none;" onclick="component.clist()"><i class="large material-icons left">toc</i>MORE INFO</a>
+		          </div>
+		        </div>
+		      </div>
+		`;
+		}
+
+		
+		html+=`
+		</div>
+		</div>
+		</div>
+
+		<!-- END CHARACTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- START GREAT HOUSES -->
+
+		<div id="great" class="display">
+			<aside class="c1">
+				<div class="text-vertical-center">
+						<a href="#"  style="text-decoration: none" onclick="component.clist()">                       
+								<h1 id="foont">GREAT HOUSES</h1>
+						</a>
+				</div>
+			</aside>
+
+
+			<section id="services">
+				<div class="container">
+					<div class="row text-center">
+	                  <h2 class="light">The Great Houses are the most powerful of the noble houses of the Seven Kingdoms. 
+	                  They exercise immense authority and power over their vassals and territories and are answerable only to 
+	                  the King of the Andals and the First Men, Lord of the Seven Kingdoms and Protector of the Realm.</h2>
+					</div>
+				</div>
+			</section>
+
+
+							<!-- HOUSE STARK -->
+
+				          <div class="c2">
+				            
+				          </div>
+
+
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <div class="card smarl">
+                                <img src="img/stark2.png">
+                              </div> 
+                            </div>
+
+                          <div class="card-stacked">
+                            <div class="card-content">
+                              <ul>
+                                  <li><b> Sigil: </b> A grey direwolf on a white field </li>                                  
+                                  <li><b> Words: </b>"Winter is Coming" </li>
+                                  <li><b> Titles: </b>Kings in the North</br>
+                                                Lords of Winterfell</br>
+                                                Lords Paramount of the North 
+                                  </li> 
+                                  <li><b> Seat: </b>Winterfell</li>               
+                              </ul>
+                                  <p> <b>House Stark</b> of Winterfell is a Great House of Westeros, ruling over the vast region known as the North and 
+                                  the Vale as Kings in the North from their seat in Winterfell, recently retaken by the Starks from House Bolton. 
+                                  It is by far one of the oldest lines of Westerosi nobility, claiming a line of descent stretching back over eight 
+                                  thousand years. The head of the house is the Lord of Winterfell. Before the Targaryen conquest, the leaders of House 
+                                  Stark ruled over the region as the Kings in the North. Jon Snow is the current King in the North and the Vale, 
+                                  partially due to the allegiance of Petyr Baelish, the Lord Regent of the Vale, to House Stark. </p> </br>
+                                  <p> <b><i>SPOILERS</i></b> Their rule in the North seemingly ended after the events of the Red Wedding when House Frey 
+                                  and House Bolton betrayed them, after joining alliance with House Lannister. Roose Bolton personally killed King Robb Stark. 
+                                  Both the North and Winterfell were taken over by House Bolton, but their hold was jeopardized when Sansa Stark escaped their 
+                                  clutches after learning that her brothers Bran and Rickon Stark were still alive. House Stark were restored to their former stature 
+                                  after the Battle of the Bastards albeit at great cost with Rickon's death. Their success in this battle later leads to the resurgence 
+                                  of House Stark as the royal family of the North, with its vassals declaring Jon Snow as King in the North. </p>
+                          	</div>
+		            			<a class="btn1 btn-lg btn-primary" 
+		            			href="#" style=" margin-right: auto;   text-decoration: none; " onclick="component.clist()">STARK CHARACTERS</a>
+		            			</div>   
+							  </div>
+
+							<!-- HOUSE STARK -->
+
+							<br />
+							<br />
+							<br />
+
+							<!-- HOUSE TARGARYEN -->
+
+				          <div class="c3">
+				            
+				          </div>
+
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <div class="card smarl">
+                                <img src="img/fire2.png">
+                              </div> 
+                            </div>
+                          <div class="card-stacked">
+                            <div class="card-content">
+                              <ul>
+                                  <li><b> Sigil: </b> A red three-headed dragon, <br />
+                                                      on a black field 
+                                  </li>                                  
+                                  <li><b> Words: </b>"Fire and Blood"</li>
+                                  <li><b> Titles: </b>Queen of the Andals and the First Men (claimant)<br/>
+                                                 Lord of the Seven Kingdoms (claimant)<br/>
+                                                Protector of the Realm (claimant)<br/>
+                                                Queen of Meereen (formerly)</li>
+                                  <li><b> Seat: </b>Great Pyramid, Meereen<br/>
+                                                    Dragonstone (formerly)<br/>
+                                                    Red Keep, King's Landing (formerly) </li>                                                                                    
+                              </ul>
+                                  <p><b>House Targaryen</b> is a former Great House of Westeros and was the ruling royal House of the Seven Kingdoms for three centuries, 
+                                  before it was deposed during Robert's Rebellion and House Baratheon replaced it as the new royal House. The few surviving Targaryens fled into 
+                                  exile. Currently based in Essos, House Targaryen seeks to retake the Seven Kingdoms from House Lannister, who formally replaced House Baratheon 
+                                  as the royal House following the destruction of the Great Sept of Baelor. </p> </br>
+                                  <p>House Targaryen's sigil is a three-headed red dragon on a black background, and their words are "Fire and Blood". </p>
+                          </div>
+		            			<a class="btn1 btn-lg btn-primary" 
+		            			href="#" style=" margin-right: auto; text-decoration: none; " onclick="component.clist()">TARGARYEN CHARACTERS</a>
+		            		</div>
+		            		</div>
+							<!-- HOUSE TARGARYEN -->
+
+							<br />
+							<br />
+							<br />
+
+							<!-- HOUSE LANNISTER -->
+
+
+				          <div class="c4">
+				            
+				          </div>
+
+
+                          <div class="card horizontal">
+                            <div class="card-image">
+                              <div class="card smarl">
+                                <img src="img/lannister2.png">
+                              </div> 
+                            </div>
+                          <div class="card-stacked">
+                            <div class="card-content">
+                              <ul>
+                                  <li><b> Sigil: </b> A golden lion rampant on a crimson field.</li>                                  
+                                  <li><b> Words: </b>"Hear Me Roar!"(official)<br />
+                                                      "A Lannister Always Pays His Debts" (common saying)</li>
+                                  <li><b> Titles: </b>Queen of the Andals and the First Men<br />
+                                                    Protector of the Seven Kingdoms<br />
+                                                    Lords of Casterly Rock<br />
+                                                    Lords Paramount of the Westerlands<br />
+                                                    Wardens of the West<br />
+                                                    Kings of the Rock (pre-Wars of Conquest)</li>
+                                  <li><b> Seat: </b> Red Keep, King's Landing Casterly Rock (ancestral)</li>
+                              </ul>
+                                  <p><b>House Lannister </b>of Casterly Rock is one of the Great Houses of Westeros, one of its richest and most powerful 
+                                  families and oldest dynasties. It is also the current royal house of the Seven Kingdoms following the extinction of House 
+                                  Baratheon of King's Landing. </p> </br>
+                                  <p>Their lands are in the far west of the continent. Their seat is Casterly Rock, a massive rocky promontory overlooking the Sunset 
+                                  Sea which has had habitations and fortifications built into it over the millennia. They are the Lords Paramount of the Westerlands and 
+                                  Wardens of the West. As the new royal house, they also rule directly over the Crownlands from their seat of the Red Keep in King's Landing,
+                                  the traditional seat of the royal family. House Lannister's Heraldry consists of a golden lion on a crimson background, and their House words 
+                                  are "Hear me roar!", which is rarely mentioned. Their unofficial motto, which is as well known as the official one, is "A Lannister always pays 
+                                  his debts" - which is used much more often and mostly in negative context, though it can also be used in the original, literal sense. </p>
+                          </div>
+		            			<a class="btn1 btn-lg btn-primary" 
+		            			href="#" style=" margin-right: auto;   text-decoration: none; " onclick="component.clist()">LANNISTER CHARACTERS</a>
+							  </div>
+							  </div>
+
+
+							<!-- HOUSE LANNISTER -->
+
+
+
+							<br />
+							<br />
+							<br />
+
+
+                            </div>
+						  </div>                          
+                      	</div>
+					  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CHARACTER LIST -->
+
+
+		<div id="charlist" class="display">
+
+		            <aside id="callout1">
+                	<div class="text-vertical-center">
+					<h1 class="text-center" >CHARACTERS</h1>
+                	</div>
+            		</aside>
+
+					<div class="container1" id="adjust">
+					<div class="row1">
+					<center>
+						<div class="col-xs-15 col-md-12">
+						<table class="table table-responsive table-hover" id="adjust1">
+						<thead>
+						<tr>
+
+							<th>Name</th>
+							<th>Family</th>
+						</tr>
+					    </thead>
+						<div class="input-group stylish-input-group" id="adjustsearch">
+						<input oninput="component.char()" 
+						type="text" class="form-control"  placeholder="Search" id="charactersearch">
+						<span class="input-group-addon"> 
+						</span>
+						</div>
+
+						<tbody id="characterlist"></tbody>
+						</table>
+		</div>
+		</div>
+		</div>
+    	</div>
+        <!-- END CHARATER LIST -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- START UPDATE-DELETE  -->
+        <div id="updatedelete" class="display">
+
+            <div class="container" id="adjust5">
+            <div class="row">
+            <div id="characterinfo"></div>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- END UPDATE-DELETE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- START CREATE PAGE -->
+        <div id="cr8" class="display">
+        <div class="container" id="adjust5">
+        <div class="row">
+            <div class="col col-sm-12">
+                <div id="charatercreate"></div>		
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- END CREATE PAGE -->
+
+
+
+
+
+
+
+          <!-- FOOTER -->
+
+            <footer class="page-footer1 teal1">
+              <div class="container1">
+                <div class="row1">
+                  <div class="col1 l61 s121">
+
+
+                  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
+                  <a href="#" onclick="component.land()" >
+                    <img border="0" src="img/wolf.png" width="100" height="70" style="margin:25px 5px">
+                  </a>
+                    <h5 class="white-text2">GAME OF THRONES</h5>
+                    <p class="grey-text1 text-lighten-41">A student at AMA Davao Computer College </p>
+
+
+                  </div>
+                  <div class="col1 l31 s121">
+                    <h5 class="white-text1">MENU</h5>
+                    <ul>
+                      <li><a class="white-text1" href="#" onclick="component.land()">HOME</a></li>
+                      <li><a class="white-text1" href="#" onclick="component.house()">GREAT HOUSES</a></li>                      
+                      <li><a class="white-text1" href="#" onclick="component.clist()">CHARACTER</a></li>
+                      <li><a class="white-text1" href="#" onclick="component.create()">CREATE</a></li>
+                    </ul>
+                  </div>
+
+                   <div class="col1 l31 s121">
+                    <h5 class="white-text1 footer-right">CONTACT US</h5>
+						<a href="https://www.facebook.com/elvin.francisco.545"><i class="fa fa-facebook fa-4x"></i></a>
+						<a href="http://steamcommunity.com/id/POPcola/"><i class="fa fa-steam fa-4x"></i></a>
+					 	<a href="https://github.com/Ejaaayy"><i class="fa fa-github fa-4x"></i></a>                    
+                  </div>
+
+
+
+                </div>
+              </div>
+
+              <div class="footer-copyright1">
+                <div class="container1">
+                 <a class="brown-text1 text-lighten-31" href="https://www.facebook.com/elvin.francisco.545">ELVIN JOHN FRANCISCO</a>
+                </div>
+              </div>
+            </footer>
+
+          <!-- FOOTER -->
+
+		`;
+		this.reRender(`${html}`,document.getElementById("app"));	
+		this.characterlist();
+	}
+
+
+	land(){
+		$('#landingpage').show();
+		$('#great').hide();
+		$('#charlist').hide();
+        $('#updatedelete').hide();
+        $('#cr8').hide();
+        $('#great').hide();
+	}
+
+	house(){
+		$('#landingpage').hide();
+		$('#great').show();		
+		$('#charlist').hide();
+        $('#updatedelete').hide();
+        $('#cr8').hide();
+	}
+	clist(){
+		$('#landingpage').hide();
+		$('#great').hide();		
+		$('#charlist').show();
+        $('#updatedelete').hide();
+        $('#cr8').hide();
+	}
+    
+    deleteupdate(){
+		$('#landingpage').hide();
+		$('#great').hide();		
+		$('#charlist').hide();
+        $('#updatedelete').show();
+        $('#cr8').hide();
+	}
+    
+    create(){
+        $('#landingpage').hide();
+		$('#great').hide();        
+		$('#charlist').hide();
+        $('#updatedelete').hide();
+        $('#cr8').show();
+        
+    }
+
+
+
+
+
 
 <!-- CHARACTER LIST-->
 
@@ -131,9 +716,9 @@ class App{
                     </div>
                     <div class="col-lg-8 col-xs-12" id="adjustDetails1">
                         <h1 id="slimfont">${this.lists[key].name}</h1>
-                        <button class="btn btn-primary btn-lg outline" onclick="component.updatecharacter(${key})">Update</button>
-                        <button class="btn btn-primary btn-lg outline" onclick="component.characterdelete(${key})">Delete</button>
-                        <button class="btn btn-primary btn-lg outline" onclick="component.clist()">Back</button>
+                        <button class="btn2" onclick="component.updatecharacter(${key})"><i class="medium1 material-icons left">loop</i>UPDATE</button>
+                        <button class="btn2" onclick="component.characterdelete(${key})"><i class="medium1 material-icons left">delete sweep</i>DELETE</button>
+                        <button class="btn2" onclick="component.clist()"><i class="medium1 material-icons left">reply</i>BACK</button>
                     </div>
                     <div class="col-lg-12 col-xs-12" id="adjust100">
                         <ul class="list-group">
@@ -238,6 +823,9 @@ class App{
 
 
 
+
+
+
 <!-- CHARACTER UPDATE -->
 
     updatecharacter(key){
@@ -249,7 +837,7 @@ class App{
                         Name: <input class="form-control" id="updateName" type="text" value="${this.lists[key].name}" /><br/>
                         Description: <input class="form-control" id="updateDescription" type="text" value="${this.lists[key].description}" /><br/>
                         Family: <input class="form-control" id="updateFamily" type="text" value="${this.lists[key].family}" /><br/>
-                        <button class="btn btn-success" onclick="component.characterupdate(${key})">Save</button>
+                        <button class="btn btn-success" onclick="component.characterupdate(${key})"><i class="medium material-icons left">save</i></button>
                 </div>
 			`,document.getElementById('bookDetailsInfo'));
 	}
@@ -268,8 +856,6 @@ class App{
 <!-- DELETING CHARACTER -->
 
     characterdelete(key){		
-		let table = document.getElementById('characterlist');
-		table.deleteRow(key);
 		this.lists.splice(key,1);
 
 		let details = document.getElementById('characterinfo');
@@ -315,354 +901,8 @@ class App{
 
 
 
-
-
-
-
-
-
-
-
-
 }
 
-class Component extends App{
-	constructor(){
-
-		super();
-	}
-
-	x(){
-		let html = `
-
-
-
-		<!-- NAV -->
-
-		<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-			<div class="container topnav font">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand topnav" href="#" onclick="component.land()">
-                    <img border="0" src="img/wolf.png" width="100" height="70" style="margin:-26px 0px">
-					</a>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#" onclick="component.land()">HOME</a>
-						</li>
-						<li>
-							<a href="#" onclick="component.clist()">CHARACTERS</a>
-						</li>
-						<li>
-							<a href="#" onclick="component.create()">CREATE</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-		<!-- NAV -->
-
-
-
-
-
-		<!-- LOGO -->
-
-		<div id="landingpage">
-		<div class="intro-header">
-
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="intro-image">
-
-						</div>
-					</div>
-				</div>
-
-		</div>
-
-		<!-- LOGO -->
-
-
-
-
-
-
-		<!-- DESCRIPTION -->
-
-		<section id="services">
-			<div class="container">
-				<div class="row text-center">
-						<h2 class="service-heading">GAME OF THRONES</h2>
-						<p class="text-muted">Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. 
-            			It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones. 
-            			It is filmed at Titanic Studios in Belfast, on location in the United Kingdom, and in Croatia, Iceland, Malta, Morocco, Spain, and the United 
-            			States. The series premiered on HBO in the United States on April 17, 2011, and its sixth season ended on June 26, 2016. The series was renewed
-             			for a seventh season, scheduled to premiere in mid-2017, with a total of seven episodes and will conclude with its eighth season in 2018.</p>
-					</div>
-				</div
-			</div>
-		</section>
-
-		<!--  DESCRIPTION -->
-
-
-
-
-
-
-		<!-- CHARACTERS BANNER-->
-
-		<aside class="c">
-			<div class="text-vertical-center">
-			    <a href="#"  style="text-decoration: none" onclick="component.clist()">                       
-				<h1 id="foont">CHARACTERS</h1>
-				</a>
-			</div>
-		</aside>
-
-		<!-- CHARACTERS BANNER-->
-
-
-
-
-
-
-		<!-- DESCRIPTION -->
-
-		<section id="services">
-			<div class="container">
-				<div class="row text-center">
-						<h2 class="service-heading">ABOUT US</h2>
-						<p class="text-muted">A site for speculation, and discussion for HBO’s Game of Thrones, 
-          				the television adaptation of George R. R. Martin’s A Song of Ice and Fire series. 
-          				and has been following the production closely ever since. Student of AMA Davao Computer College.</p>
-					</div>
-				</div
-			</div>
-		</section>
-
-		<!--  DESCRIPTION -->
-
-
-
-
-
-
-
-		<!-- START CHARACTER -->
-
-
-		`;
-        
-		for(let index=0;index<0;index++){
-		    html+=`
-		      <div class="col-xs-12 col-md-4"> 
-		        <div class="thumbnail"> 
-		          <img src="${this.lists[index].image}"> 
-		          <div class="caption">
-		            <h3>${this.lists[index].name}</h3>
-		            <p>${this.lists[index].description}</p>
-		          </div>
-		        </div>
-
-		`;
-		}
-
-		
-		html+=`
-		</div>
-		</div>
-		</div>
-
-		<!-- END CHARACTER -->
-
-
-
-
-        <!-- CHARACTER LIST -->
-
-
-		<div id="charlist" class="display">
-
-		            <aside id="callout1">
-                	<div class="text-vertical-center">
-					<h1 class="text-center" >CHARACTERS</h1>
-                	</div>
-            		</aside>
-
-					<div class="container1" id="adjust">
-					<div class="row1">
-					<center>
-						<div class="col-xs-15 col-md-12">
-						<table class="table table-responsive table-hover" id="adjust1">
-						<thead>
-						<tr>
-
-							<th>Name</th>
-							<th>Family</th>
-						</tr>
-					    </thead>
-						<div class="input-group stylish-input-group" id="adjustsearch">
-						<input oninput="component.char()" 
-						type="text" class="form-control"  placeholder="Search" id="charactersearch">
-						<span class="input-group-addon"> 
-						</span>
-						</div>
-
-						<tbody id="characterlist"></tbody>
-						</table>
-		</div>
-		</div>
-		</div>
-    	</div>
-        <!-- END CHARATER LIST -->
-
-
-
-
-
-
-
-        <!-- START UPDATE-DELETE  -->
-        <div id="updatedelete" class="display">
-
-            <div class="container" id="adjust5">
-            <div class="row">
-            <div id="characterinfo"></div>
-            </div>
-            </div>
-
-        </div>
-
-        <!-- END UPDATE-DELETE -->
-
-
-
-
-
-		<!-- START CREATE PAGE -->
-        <div id="cr8" class="display">
-        <div class="container" id="adjust5">
-        <div class="row">
-            <div class="col col-sm-12">
-                <div id="charatercreate"></div>		
-            </div>
-        </div>
-        </div>
-        </div>
-
-        <!-- END CREATE PAGE -->
-
-
-
-
-
-
-
-          <!-- FOOTER -->
-
-            <footer class="page-footer1 teal1">
-              <div class="container1">
-                <div class="row1">
-                  <div class="col1 l61 s121">
-
-
-                  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
-                  <a href="#" onclick="component.land()" >
-                    <img border="0" src="img/wolf.png" width="100" height="70" style="margin:25px 5px">
-                  </a>
-                    <h5 class="white-text2">GAME OF THRONES</h5>
-                    <p class="grey-text1 text-lighten-41">A student at AMA Davao Computer College </p>
-
-
-                  </div>
-                  <div class="col1 l31 s121">
-                    <h5 class="white-text1">MENU</h5>
-                    <ul>
-                      <li><a class="white-text1" href="#" onclick="component.land()">HOME</a></li>
-                      <li><a class="white-text1" href="#" onclick="component.clist()">CHARACTER</a></li>
-                      <li><a class="white-text1" href="#" onclick="component.create()">CREATE</a></li>
-                    </ul>
-                  </div>
-
-                   <div class="col1 l31 s121">
-                    <h5 class="white-text1 footer-right">CONTACT US</h5>
-						<a href="https://www.facebook.com/elvin.francisco.545"><i class="fa fa-facebook fa-4x"></i></a>
-						<a href="http://steamcommunity.com/id/POPcola/"><i class="fa fa-steam fa-4x"></i></a>
-					 	<a href="https://github.com/Ejaaayy"><i class="fa fa-github fa-4x"></i></a>                    
-                  </div>
-
-
-
-                </div>
-              </div>
-
-              <div class="footer-copyright1">
-                <div class="container1">
-                 <a class="brown-text1 text-lighten-31" href="https://www.facebook.com/elvin.francisco.545">ELVIN JOHN FRANCISCO</a>
-                </div>
-              </div>
-            </footer>
-
-          <!-- FOOTER -->
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-		`;
-		this.reRender(`${html}`,document.getElementById("app"));	
-		this.characterlist();
-	}
-
-
-	land(){
-		$('#landingpage').show();
-		$('#charlist').hide();
-        $('#updatedelete').hide();
-        $('#cr8').hide();
-	}
-
-	clist(){
-		$('#landingpage').hide();
-		$('#charlist').show();
-        $('#updatedelete').hide();
-        $('#cr8').hide();
-	}
-    
-    deleteupdate(){
-		$('#landingpage').hide();
-		$('#charlist').hide();
-        $('#updatedelete').show();
-        $('#cr8').hide();
-	}
-    
-    create(){
-        $('#landingpage').hide();
-		$('#charlist').hide();
-        $('#updatedelete').hide();
-        $('#cr8').show();
-        
-    }
-
-}
 
 let component = new Component();
 component.x();
