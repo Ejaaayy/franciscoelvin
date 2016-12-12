@@ -710,7 +710,7 @@ class Component extends App{
 			`
                     <div id="container">
                     <div id="row">
-                    <div id="bookDetailsInfo">
+                    <div id="infodetails">
                     <div class="col-lg-4 col-xs-12" id="adjustDetails">
                     <div class="thumbnail"><img src="${this.lists[key].image}"></div>
                     </div>
@@ -839,7 +839,7 @@ class Component extends App{
                         Family: <input class="form-control" id="updateFamily" type="text" value="${this.lists[key].family}" /><br/>
                         <button class="btn btn-success" onclick="component.characterupdate(${key})"><i class="medium material-icons left">save</i></button>
                 </div>
-			`,document.getElementById('bookDetailsInfo'));
+			`,document.getElementById('infodetails'));
 	}
     
 <!-- CHARACTER UPDATE -->
